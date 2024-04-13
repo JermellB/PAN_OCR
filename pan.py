@@ -1,5 +1,4 @@
 #!/bin/bash
-from __future__ import print_function
 from config import *
 from utils.darknet_classify_image import *
 from utils.tesseract_ocr import *
