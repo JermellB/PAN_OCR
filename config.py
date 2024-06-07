@@ -20,11 +20,6 @@ def parse_args():
 		parser.error("Tesseract must be set, add -t")
 	
 	return args
-
-
-## Change the following variable based on what algorithms you want to use ##
-global DARKNET, TESSERACT, DARKNET_BINARY_LOCATION, DARKNET_THRESH, DARKNET_DATA_FILE, \
-		DARKNET_CFG_FILE, DARKNET_WEIGHTS
 		
 
 args = parse_args()
@@ -44,7 +39,6 @@ TESSERACT = args.TESSERACT
 if DARKNET:
 	if args.DARKNET_BINARY_LOCATION == None:
 		if os.name == 'nt':
-			global popen_spawn
 			from pexpect import popen_spawn
 			DARKNET_BINARY_LOCATION = "darknet.exe"
 		else:
